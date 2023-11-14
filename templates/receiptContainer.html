@@ -59,8 +59,11 @@
                     <td>
                         SONGS
                     </td>
-                    <td class="length">
-                        AMT
+                    <td class="length ">
+                        <p class="m-0 p-0" style="text-align: end;">
+                            AMT
+                        </p>
+                        
                     </td>
                 </tr>
             </thead>
@@ -75,8 +78,11 @@
                         {{ song.name }}
                         </p>
                     </td>
-                            <td class="length">
-                        {{ song.duration_ms | mmss }}
+                            <td class="length ">
+                        <p class="m-0 p-0" style="text-align: end;">
+                            {{ song.duration_ms | mmss }}
+                        </p>
+    
                     </td>
                 </tr>
             {% endfor %}
@@ -86,7 +92,9 @@
                     ITEM COUNT:
                 </td>
                 <td class="length">
-                    {{ songs | length }}
+                    <p class="p-0 m-0" style="text-align: end;">
+                        {{ songs | length }}
+                    </p>
                 </td>
             </tr>
             <tr class="total-counts-end">
@@ -94,7 +102,9 @@
                     TOTAL:
                 </td>
                 <td class="length">
-                    {{ (songs | sum(attribute='duration_ms')) | mmss }}
+                    <p class="p-0 m-0" style="text-align: end;">
+                        {{ (songs | sum(attribute='duration_ms')) | mmss }}
+                    </p>
                 </td>
             </tr>
 
