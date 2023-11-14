@@ -1,4 +1,4 @@
 Flask
 spotipy
 gunicorn
-dotenv
+uuid

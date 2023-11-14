@@ -4,7 +4,6 @@ from spotipy.oauth2 import SpotifyOAuth
 import time 
 from time import gmtime, strftime
 import os
-import dotenv
 import uuid
 
 
