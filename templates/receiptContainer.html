@@ -5,9 +5,7 @@
         
         <img src="../static/ticket.png" width="300px" style="min-width: 300px;" alt="">
         
-
-
-        <table class=" text-start  " style=" color: white; position: absolute; width: 280px; font-weight: bold; top: 110px; left: 50%; transform: translateX(-50%); font-size: 10px; ">
+        <table class=" text-start" style=" color: white; position: absolute; width: 280px; font-weight: bold; top: 110px; left: 50%; transform: translateX(-50%); font-size: 10px; ">
             <thead>
                 <tr>
                    <td class=" m-0 p-0  " style="border-bottom: 1px solid white">
@@ -20,7 +18,7 @@
             </thead>
          </table>
 
-         <table class=" text-start  " style="color: white; position: absolute; width: 280px;  top: 135px; left: 50%; transform: translateX(-50%); font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+         <table class=" text-start  " style=" color: white; position: absolute; width: 280px; font-weight: bold; top: 135px; left: 50%; transform: translateX(-50%); font-size: 10px; ">
             <thead>
                 <tr>
                    <td class=" m-0 p-0  " >
@@ -30,38 +28,27 @@
             
                 </td>
                 </tr>
-                
-            </thead>
-         </table>
 
-         <table class=" text-start  " style="color: white; position: absolute; width: 280px;  top: 150px; left: 50%; transform: translateX(-50%); font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
-            <thead>
                 <tr>
-                   <td class=" m-0 p-0" >
-                    <p class="date text-start p-0 m-0 px-1" style="font-weight: bold; color: white; font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
-                        {{ duration }}
-                    </p> 
-                </td>
-                </tr>
+                    <td class=" m-0 p-0" >
+                     <p class="date text-start p-0 m-0 px-1" style="font-weight: bold; color: white; font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+                         {{ duration }}
+                     </p> 
+                 </td>
+                 </tr>
+
+                 <tr>
+                    <td class=" m-0 p-0" >
+                     <p class="date text-start p-0 m-0 px-1" style="font-weight: bold; color: white; font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+                         SEAT #0001 FOR {{ display_name }}
+                     </p>
+                                 
+                 </td>
+                 </tr>
+ 
                 
             </thead>
          </table>
-
-         <table class=" text-start  " style="color: white; position: absolute; width: 280px;  top: 165px; left: 50%; transform: translateX(-50%); font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
-            <thead>
-                <tr>
-                   <td class=" m-0 p-0" >
-                    <p class="date text-start p-0 m-0 px-1" style="font-weight: bold; color: white; font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
-                        SEAT #0001 FOR {{ display_name }}
-                    </p>
-                                
-                </td>
-                </tr>
-                
-            </thead>
-         </table>
-
-
         
         <table class=" text-start  " style=" color: white; position: absolute; width: 280px; font-weight: bold; top: 190px; left: 50%; transform: translateX(-50%); font-size: 10px; ">
             <thead>
@@ -83,8 +70,10 @@
                     <td class="begin">
                         {{ loop.index }}
                     </td>
-                    <td class="name text-start" style="white-space: nowrap; font-weight: bold; overflow: hidden; text-overflow: ellipsis; width: 160px; display: block;">
+                    <td class="name text-start song-name" >
+                        <p class="m-0 p-0" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 160px;">
                         {{ song.name }}
+                        </p>
                     </td>
                             <td class="length">
                         {{ song.duration_ms | mmss }}
@@ -115,68 +104,75 @@
 
 
 
-<table class=" text-start  " style="color: white; position: absolute; width: 280px;  top: 395px; left: 50%; transform: translateX(-50%); font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
-    <thead>
+            <table class=" text-start  " style=" color: white; position: absolute; width: 280px; font-weight: bold; top: 395px; left: 50%; transform: translateX(-50%); font-size: 10px; ">
+                <thead>
+                    <tr>
+                       <td class=" m-0 p-0  " >
+                        <p class="date text-start p-0 m-0 px-1" style="font-weight: bold; color: white; font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+                            CARD #: **** **** **** {{ currentTime.tm_year }}
 
-        <tr>
-           <td class=" m-0 p-0" >
-            <p class="date text-start p-0 m-0 px-1" style="font-weight: bold; color: white; font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
-                CARD #: **** **** **** {{ currentTime.tm_year }}
-            </p>           
+                        </p>
+                
+                    </td>
+                    </tr>
+    
+                    <tr>
+                        <td class=" m-0 p-0" >
+                         <p class="date text-start p-0 m-0 px-1" style="font-weight: bold; color: white; font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+                            AUTH CODE: 123421
+
+                         </p> 
+                     </td>
+                     </tr>
+    
+                     <tr>
+                        <td class=" m-0 p-0" >
+                         <p class="date text-start p-0 m-0 px-1" style="font-weight: bold; color: white; font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+                            CARDHOLDER: {{ display_name }}    
+
+                         </p>
+                                     
+                     </td>
+                     </tr>
+
+                     <tr>
+                        <td class=" m-0 p-0" >
+                         <p class="date text-start p-0 m-0 px-1" style="font-weight: bold; color: white; font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+                            Release date: October 13, 2023    
+
+
+                         </p>
+                                     
+                     </td>
+                     </tr>
+     
+
+     
+                    
+                </thead>
+             </table>
+
+<table class=" text-start" style=" color: white; position: absolute; width: 280px; font-weight: bold; top: 470px; left: 50%; transform: translateX(-50%); font-size: 10px; ">
+<thead>
+    <tr>
+        <td class=" m-0 p-0  text-center" >
+        <p class="date text-start p-0 m-0 px-1" style=" color: white;  font-weight: bolder; font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+            THANK YOU FOR BOOKING!
+        </p>
         </td>
-        </tr>
+    </tr>
+    
+</thead>
+</table>
 
-        <tr>
-            <td class=" m-0 p-0" >
-                <p class="date text-start p-0 m-0 px-1" style="font-weight: bold; color: white; font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
-                AUTH CODE: 123421
-            </p>
-        </td>
-        </tr>
-
-        <tr>
-            <td class=" m-0 p-0" >
-                <p class="date text-start p-0 m-0 px-1" style="font-weight: bold; color: white; font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
-                    CARDHOLDER: {{ display_name }}    
-                </p>
-        </td>
-        </tr>
-
-        <tr>
-            <td class=" m-0 p-0" >
-                <p class="date text-start p-0 m-0 px-1" style="font-weight: bold; color: white; font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
-                    Release date: October 13, 2023    
-                </p>
-        </td>
-        </tr>
-
-    </thead>
- </table>
-
-
- <table class=" text-start  " style="color: white; position: absolute; width: 280px;  top: 470px; left: 50%; transform: translateX(-50%); font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+ <table class=" text-start" style=" color: white; position: absolute; width: 280px; font-weight: bold; bottom: 25px; left: 50%; transform: translateX(-50%); font-size: 10px; ">
     <thead>
         <tr>
            <td class=" m-0 p-0  text-center " >
-            <p class="date text-start p-0 m-0 px-1" style="font-weight: bold; color: white; font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
-         THANK YOU FOR BOOKING!
-            </p>
-
-        </td>
-        </tr>
-        
-    </thead>
- </table>
-
- <table class=" text-start  " style="color: white; position: absolute; width: 280px;  bottom: 25px; left: 50%; transform: translateX(-50%); font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
-    <thead>
-        <tr>
-           <td class=" m-0 p-0  text-center " >
-            <p class="date text-start p-0 m-0 px-1" style="font-weight: bold; color: white; font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+            <p class="date text-start p-0 m-0 px-1" style=" color: white;  font-weight: bolder; font-size: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
                 https://swiftify.onrender.com
             </p>
-
-        </td>
+           </td>
         </tr>
         
     </thead>

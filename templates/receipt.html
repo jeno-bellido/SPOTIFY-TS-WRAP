@@ -5,7 +5,7 @@
 <head>
     <link rel="icon" href="../static/icon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../static/icon.ico" type="image/x-icon">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -113,6 +113,8 @@ $(document).ready(function () {
         var clone = hiddenClone(offScreen);
         clone.style.backgroundColor = "transparent";  // Set the background color to transparent
         var scale = 3; // Increase the scale for higher quality (you can adjust this value)
+        window.scrollTo(0,0);
+
         html2canvas(clone, {
             scrollY: -window.scrollY,
             backgroundColor: null, // Set backgroundColor to null
