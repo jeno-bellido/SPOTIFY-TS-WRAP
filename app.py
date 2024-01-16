@@ -108,6 +108,18 @@ def getTracks():
         currentTime=gmtime()
     )
 
+@app.route('/logout')
+def logout():
+    session.clear()
+
+    # Delete the cache file
+    session_id = request.cookies.get(app.config['SESSION_COOKIE_NAME'])
+    cache_path = f".cache-{session_id}"
+    if os.path.exists(cache_path):
+        os.remove(cache_path)
+
+    return redirect('/')
+
 
 @app.template_filter('strftime')
 def _jinja2_filter_datetime(date, fmt=None):
