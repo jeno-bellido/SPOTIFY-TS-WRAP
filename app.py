@@ -84,9 +84,9 @@ def getTracks():
     taylor_swift_id = '06HL4z0CvFAxyc27GXpf02'
 
     # Get the user's top tracks for different time ranges
-    long_term_tracks = sp.current_user_top_tracks(limit=1000, time_range=LONG_TERM)
-    medium_term_tracks = sp.current_user_top_tracks(limit=1000, time_range=MEDIUM_TERM)
-    short_term_tracks = sp.current_user_top_tracks(limit=1000, time_range=SHORT_TERM)
+    long_term_tracks = sp.current_user_top_tracks(limit=50, time_range=LONG_TERM)
+    medium_term_tracks = sp.current_user_top_tracks(limit=50, time_range=MEDIUM_TERM)
+    short_term_tracks = sp.current_user_top_tracks(limit=50, time_range=SHORT_TERM)
 
 
     # Filter the top tracks to get Taylor Swift's tracks for each time range
