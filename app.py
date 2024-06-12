@@ -134,3 +134,5 @@ def _jinja2_filter_miliseconds(time, fmt=None):
         return str(minutes) + ":0" + str(seconds)
     return str(minutes) + ":" + str(seconds ) 
 
+if __name__ == "__main__":
+    app.run(debug=True)
